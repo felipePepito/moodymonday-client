@@ -1,11 +1,11 @@
 <form>
     <div class="form-group">
         <label for="idUser">Deine ID</label>
-        <input name="idUser" id="idUser">
+        <input [(ngModel)]="moodState.idUser" name="idUser" id="idUser">
     </div>
     <div class="form-group">
         <label for="arousal">Erregung</label>
-        <select multiple class="form-control" id="arousal" name="arousal">
+        <select [(ngModel)]="moodState.arousal" multiple class="form-control" id="arousal" name="arousal">
             <option value="1">Sehr niedrig</option>
             <option value="2">Niedrig</option>
             <option value="3">Etwas niedrig</option>
@@ -17,7 +17,7 @@
     </div>
     <div class="form-group">
         <label for="valence">Valenz</label>
-        <select multiple class="form-control" id="valence" name="valence">
+        <select [(ngModel)]="moodState.valence" multiple class="form-control" id="valence" name="valence">
             <option value="1">Sehr niedrig</option>
             <option value="2">Niedrig</option>
             <option value="3">Etwas niedrig</option>
@@ -30,3 +30,11 @@
     <button type="submit" class="btn btn-primary">Absenden</button>
         
 </form>
+
+<div class="card">
+    <div class="card-body">
+        <p class="card-text">Id User: {{moodState.idUser}}</p>
+        <p class="card-text">Arousal: {{moodState.arousal}}</p>
+        <p class="card-text">Valence: {{moodState.valence}}</p>
+    </div>
+</div>

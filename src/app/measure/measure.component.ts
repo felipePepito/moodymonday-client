@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MoodState} from '../mood-state';
 
 @Component({
-  selector: 'app-measure',
-  templateUrl: './measure.component.html',
-  styleUrls: ['./measure.component.css']
+    selector: 'app-measure',
+    templateUrl: './measure.component.html',
+    styleUrls: ['./measure.component.css']
 })
 export class MeasureComponent implements OnInit {
 
-  constructor() { }
+    constructor() {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    moodState: MoodState = new MoodState();
 
 }
