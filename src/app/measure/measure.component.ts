@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MoodState} from '../mood-state';
+import {MoodStateService} from '../mood-state.service';
 
 @Component({
     selector: 'app-measure',
@@ -8,11 +9,16 @@ import {MoodState} from '../mood-state';
 })
 export class MeasureComponent implements OnInit {
 
-    constructor() {}
+    constructor(moodStateService: MoodStateService) {}
+
+
+    moodState: MoodState = new MoodState();
 
     ngOnInit() {
     }
 
-    moodState: MoodState = new MoodState();
+    saveMoodState(): void {
+
+    }
 
 }

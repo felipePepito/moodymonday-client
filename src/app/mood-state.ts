@@ -1,7 +1,7 @@
 export class MoodState {
-    
-    idUser: string;
-    arousal: number;
-    valence: number;
-    
+
+  idUser: string;
+  arousal: number;
+  valence: number;
+
 }
